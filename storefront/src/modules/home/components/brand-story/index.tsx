@@ -46,7 +46,7 @@ const BrandStory = () => {
 
           <div className="relative aspect-[16/9] bg-brand-neutral/30 rounded-lg overflow-hidden mb-12">
             <Image
-              src="/brand-story-banner.webp"
+              src="/commitment-to-quality.webp"
               alt="Ceylonspizee Brand Story"
               fill
               className="object-cover"
