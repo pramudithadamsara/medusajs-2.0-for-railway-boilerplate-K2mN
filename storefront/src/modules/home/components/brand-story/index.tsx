@@ -1,5 +1,6 @@
 import { Heading, Text } from "@medusajs/ui"
 import Image from "next/image"
+import { getAssetUrl } from "@lib/util/assets"
 
 const BrandStory = () => {
   return (
@@ -46,7 +47,7 @@ const BrandStory = () => {
 
           <div className="relative aspect-[16/9] bg-brand-neutral/30 rounded-lg overflow-hidden mb-12">
             <Image
-              src="/commitment-to-quality.webp"
+              src={getAssetUrl("/commitment-to-quality.webp")}
               alt="Ceylonspizee Brand Story"
               fill
               className="object-cover"

@@ -1,5 +1,6 @@
 import { Heading, Text } from "@medusajs/ui"
 import Image from "next/image"
+import { getAssetUrl } from "@lib/util/assets"
 
 export default function AboutSection() {
     return (
@@ -31,7 +32,7 @@ export default function AboutSection() {
                     </div>
                     <div className="relative aspect-[4/5] bg-brand-brown/5 border border-brand-brown/10 overflow-hidden group md:order-2 order-1">
                         <Image
-                            src="/commitment-to-quality.webp"
+                            src={getAssetUrl("/commitment-to-quality.webp")}
                             alt="Ceylonspizee Commitment to Quality"
                             fill
                             className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -48,7 +49,7 @@ export default function AboutSection() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
                     <div className="relative aspect-[4/5] bg-brand-brown/5 border border-brand-brown/10 overflow-hidden group md:order-1 order-2">
                         <Image
-                            src="/authentic-ceylon-spices.webp"
+                            src={getAssetUrl("/authentic-ceylon-spices.webp")}
                             alt="Premium Ceylon Spices Collection"
                             fill
                             className="object-cover transition-transform duration-700 group-hover:scale-105"

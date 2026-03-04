@@ -1,5 +1,6 @@
 import { Button, Heading, Text } from "@medusajs/ui"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { getAssetUrl } from "@lib/util/assets"
 
 const Hero = () => {
   return (
@@ -12,7 +13,7 @@ const Hero = () => {
         playsInline
         className="absolute inset-0 w-full h-full object-cover z-0"
       >
-        <source src="/hero-background-video.mp4" type="video/mp4" />
+        <source src={getAssetUrl("/hero-background-video.mp4")} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
