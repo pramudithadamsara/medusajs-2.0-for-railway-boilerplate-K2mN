@@ -34,6 +34,9 @@ module.exports = {
           80: "#1F2937",
           90: "#111827",
         },
+        "brand-gold": "#D4AF37",
+        "brand-brown": "#3E2723",
+        "brand-neutral": "#F5F5F5",
       },
       borderRadius: {
         none: "0px",
@@ -68,6 +71,11 @@ module.exports = {
           "Helvetica Neue",
           "Ubuntu",
           "sans-serif",
+        ],
+        serif: [
+          "var(--font-playfair)",
+          "Georgia",
+          "serif",
         ],
       },
       keyframes: {
