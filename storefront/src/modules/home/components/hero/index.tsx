@@ -1,48 +1,32 @@
-import { Button, Heading, Text } from "@medusajs/ui"
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
-import { getAssetUrl } from "@lib/util/assets"
+import { Github } from "@medusajs/icons"
+import { Button, Heading } from "@medusajs/ui"
 
 const Hero = () => {
   return (
-    <div className="h-[90vh] w-full relative bg-brand-neutral overflow-hidden">
-      {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0"
-      >
-        <source src={getAssetUrl("/hero-background-video.mp4")} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      {/* Dark Overlay for Readability */}
-      <div className="absolute inset-0 bg-black/30 z-[1]" />
-
-      <div className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center p-6 small:p-32 gap-8 max-w-[800px] mx-auto transition-opacity duration-700">
-        <div className="flex flex-col gap-4 animate-fade-in-top">
-          <Text className="text-white drop-shadow-md uppercase tracking-[0.3em] font-medium text-sm">
-            The Essence of Luxury
-          </Text>
+    <div className="h-[75vh] w-full border-b border-ui-border-base relative bg-ui-bg-subtle">
+      <div className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center small:p-32 gap-6">
+        <span>
           <Heading
             level="h1"
-            className="text-5xl md:text-7xl text-white drop-shadow-lg font-serif leading-tight"
+            className="text-3xl leading-10 text-ui-fg-base font-normal"
           >
-            Oudh Oil & <br /> Ceylon Spices
+            Well done! You have successfully deployed your Medusa 2.0 store on Railway!
           </Heading>
-          <Text className="text-white/90 drop-shadow-md text-lg md:text-xl max-w-[600px] mx-auto mt-4 font-light leading-relaxed">
-            Experience the rarest Oudh oils and the finest exotic spices, masterfully sourced from the heart of Ceylon.
-          </Text>
-        </div>
-
-        <div className="animate-fade-in-top delay-200">
-          <LocalizedClientLink href="/store">
-            <Button size="large" className="bg-brand-gold border-brand-gold text-brand-brown hover:bg-white hover:text-brand-brown transition-all duration-300 px-8 py-6 rounded-none font-semibold">
-              Explore Collection
-            </Button>
-          </LocalizedClientLink>
-        </div>
+          <Heading
+            level="h2"
+            className="text-3xl leading-10 text-ui-fg-subtle font-normal"
+          >
+            Need help customizing your store?
+          </Heading>
+        </span>
+        <a
+          href="https://funkyton.com/medusajs-2-0-is-finally-here/"
+          target="_blank"
+        >
+          <h1 style={{ textDecoration: "underline" }}>
+            Visit the tutorial
+          </h1>
+        </a>
       </div>
     </div>
   )
