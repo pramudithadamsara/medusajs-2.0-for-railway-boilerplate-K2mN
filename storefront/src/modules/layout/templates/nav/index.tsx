@@ -22,18 +22,30 @@ export default async function Nav() {
           <div className="flex items-center h-full">
             <LocalizedClientLink
               href="/"
-              className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
+              className="text-2xl font-serif text-brand-brown hover:text-brand-gold tracking-tight"
               data-testid="nav-store-link"
             >
-              Medusa Store
+              Ceylonspizee Store
             </LocalizedClientLink>
           </div>
 
           <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
             <div className="hidden small:flex items-center gap-x-6 h-full">
+              <LocalizedClientLink
+                className="hover:text-brand-gold uppercase tracking-widest text-[10px] font-semibold"
+                href="/store"
+              >
+                Store
+              </LocalizedClientLink>
+              <LocalizedClientLink
+                className="hover:text-brand-gold uppercase tracking-widest text-[10px] font-semibold"
+                href="/contact"
+              >
+                Contact
+              </LocalizedClientLink>
               {process.env.NEXT_PUBLIC_FEATURE_SEARCH_ENABLED && (
                 <LocalizedClientLink
-                  className="hover:text-ui-fg-base"
+                  className="hover:text-brand-gold uppercase tracking-widest text-[10px] font-semibold"
                   href="/search"
                   scroll={false}
                   data-testid="nav-search-link"
@@ -42,7 +54,7 @@ export default async function Nav() {
                 </LocalizedClientLink>
               )}
               <LocalizedClientLink
-                className="hover:text-ui-fg-base"
+                className="hover:text-brand-gold uppercase tracking-widest text-[10px] font-semibold"
                 href="/account"
                 data-testid="nav-account-link"
               >
@@ -52,7 +64,7 @@ export default async function Nav() {
             <Suspense
               fallback={
                 <LocalizedClientLink
-                  className="hover:text-ui-fg-base flex gap-2"
+                  className="hover:text-brand-gold flex gap-2 uppercase tracking-widest text-[10px] font-semibold"
                   href="/cart"
                   data-testid="nav-cart-link"
                 >

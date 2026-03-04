@@ -396,3 +396,19 @@ export async function updateRegion(countryCode: string, currentPath: string) {
 
   redirect(`/${countryCode}${currentPath}`)
 }
+
+export async function listCartOptions() {
+  const cartId = await getCartId()
+  const headers = {
+    ...(await getAuthHeaders()),
+  }
+
+  return await sdk.client.fetch<{
+    shipping_options: HttpTypes.StoreCartShippingOption[]
+  }>("/store/shipping-options", {
+    query: { cart_id: cartId },
+    headers,
+    next: { tags: ["shipping_options"] },
+    cache: "force-cache",
+  })
+}

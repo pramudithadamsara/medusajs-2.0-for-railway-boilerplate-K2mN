@@ -88,6 +88,20 @@ export async function signout(countryCode: string) {
   redirect(`/${countryCode}/account`)
 }
 
+export async function transferCart() {
+  const cartId = await getCartId()
+
+  if (!cartId) {
+    return
+  }
+
+  const headers = await getAuthHeaders()
+
+  await sdk.store.cart.transferCart(cartId, {}, headers)
+
+  revalidateTag("carts")
+}
+
 export const addCustomerAddress = async (
   _currentState: unknown,
   formData: FormData

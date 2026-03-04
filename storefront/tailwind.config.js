@@ -21,6 +21,11 @@ module.exports = {
         padding: "padding-top padding-right padding-bottom padding-left",
       },
       colors: {
+        brand: {
+          gold: "#D4AF37",
+          brown: "#4B3621",
+          neutral: "#F9F9F9",
+        },
         grey: {
           0: "#FFFFFF",
           5: "#F9FAFB",
@@ -69,6 +74,7 @@ module.exports = {
           "Ubuntu",
           "sans-serif",
         ],
+        serif: ["var(--font-playfair)", "serif"],
       },
       keyframes: {
         ring: {
